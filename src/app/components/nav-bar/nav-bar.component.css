@@ -1,0 +1,24 @@
+.fixed-element{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#fff;
+  z-index:9999;
+}
+.navbar {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link {
+    margin-right: 15px;
+  }
+  
+  .navbar-nav .btn {
+    padding: 5px 15px;
+    border-radius: 20px;
+  }
+  

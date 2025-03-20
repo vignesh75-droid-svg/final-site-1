@@ -1,0 +1,17 @@
+<div class="container">
+  </div>
+<h1 class="underline-first custom-text">News</h1>
+  <div class="news-container">
+    <div class="news-list">
+      <ul>
+        <li *ngFor="let news of newsList" (click)="updateNews(news)">
+          {{ news.title }}
+        </li>
+      </ul>
+    </div>
+    <div class="news-content">
+      <h2>{{ paper.title }}</h2>
+      <img [src]="paper.image" alt="{{ paper.title }}">
+      <p>{{ paper.content }}</p>
+    </div>
+  </div>
