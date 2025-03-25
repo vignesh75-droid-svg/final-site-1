@@ -22,7 +22,7 @@ export class ContactComponent {
       email: ['',
         [Validators.required, Validators.email]
       ],
-      Address: ['',
+      message: ['',
         [Validators.required, Validators.minLength(5)]
       ],
     });
@@ -47,8 +47,8 @@ export class ContactComponent {
   get email() {
     return this.input.get('email');
   }
-  get Address() {
-    return this.input.get('Address');
+  get message() {
+    return this.input.get('message');
   }
   delete(){
     this.input.reset();

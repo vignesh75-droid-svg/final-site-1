@@ -9,6 +9,10 @@ import { AboutComponent } from './components/about/about.component';
 
 export const routes: Routes = [ 
   {
+    path:'portfolio',
+    component:PortfolioComponent
+  },
+  {
     path:'',
     component:HomeComponent,
   },
@@ -19,10 +23,6 @@ export const routes: Routes = [
   {
     path:'showreel',
     component:ShowreelComponent
-  },
-  {
-    path:'portfolio',
-    component:PortfolioComponent
   },
  { 
   path:'job',

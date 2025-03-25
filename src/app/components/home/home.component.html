@@ -1,4 +1,3 @@
-
   <div class="home-container">
     <div class="hero-section">
       <h1>ekmsoft.in</h1>
@@ -17,7 +16,8 @@
           <div class="icon mb-3">
             <img [src]="service.icon" alt="Icon" width="90">
           </div>
-          <h4 class="text-primary">{{ service.title }}</h4>
+          <div>
+          <h4 class="text-primary">{{ service.title }}</h4></div>
           <p>{{ service.description }}</p>
         </div>
       </div>
@@ -29,7 +29,6 @@
     <section id="news">
     <app-news id="news"></app-news>
     </section>
-    
     <section id="contact">
     <app-contact></app-contact>
     </section>

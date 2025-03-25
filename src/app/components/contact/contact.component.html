@@ -44,11 +44,11 @@
             <small *ngIf="email.hasError('email')">Please enter a valid email address.</small>
           </div>
           <div class="form-group">
-              <label for="Address">Address</label>
-              <textarea id="Address" class="form-control" formControlName="Address" placeholder="message"></textarea>
-              <div *ngIf="Address.touched && Address.invalid" class="text-danger">
-                <small *ngIf="Address.hasError('required')">Message is required.</small><br>
-                <small *ngIf="Address.hasError('minlength')">Message must be at least 5 characters long.</small>
+              <label for="message">Message</label>
+              <textarea id="message" class="form-control" formControlName="message" placeholder="message"></textarea>
+              <div *ngIf="message.touched && message.invalid" class="text-danger">
+                <small *ngIf="message.hasError('required')">Message is required.</small><br>
+                <small *ngIf="message.hasError('minlength')">Message must be at least 5 characters long.</small>
               </div>
               <div class="privacy">
                 <input type="checkbox" name="privacy" [(ngModel)]="input.privacy" required />

@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 import { ContactComponent } from '../contact/contact.component';
 import { AboutComponent } from '../about/about.component';
 import { NewsComponent } from '../news/news.component';
-import { ShowreelComponent } from '../showreel/showreel.component';
+
 
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule,ContactComponent,AboutComponent,NewsComponent,ShowreelComponent],
+  imports: [CommonModule,ContactComponent,AboutComponent,NewsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
