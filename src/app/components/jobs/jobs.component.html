@@ -1,27 +1,65 @@
-<div class="home-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="home-container">
     <div class="hero-section">
       <h1>Jobs</h1>
       <p>Come join a Motivated and Productive Team</p>
     </div>
-    <svg class="curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#ffffff" fill-opacity="1"
-        d="M0,288L48,272C96,256,192,224,288,186.7C384,149,480,107,576,106.7C672,107,768,149,864,170.7C960,192,1056,192,1152,197.3C1248,203,1344,213,1392,218.7L1440,224V320H0Z">
-      </path>
-    </svg>
+    <canvas #particleCanvas></canvas>
   </div>
-  <div class="container text-center my-5">
-    <div class="row">
-      <div class="col-md-4 col-6" *ngFor="let service of services">
-        <div class="card shadow p-4 mb-4 bg-white rounded">
-          <div class="icon mb-3">
-            <img [src]="service.icon" alt="Icon" width="90">
-          </div>
-          <h4 class="text-primary">{{ service.title }}</h4>
-          <p>{{ service.description }}</p>
+  <div class="ico"></div>
+    <div class="service-container">
+      <div class="service-box">
+        <div class="icon-container">
+          <img src="pixel.jpeg" alt="App Icon" />
         </div>
+        <h3>App Development</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, dolorem!</p>
+      </div>
+      <div class="service-box">
+        <div class="icon-container">
+          <img src="app-icon.png" alt="App Icon" />
+        </div>
+        <h3>App Development</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, dolorem!</p>
+      </div>
+      <div class="service-box">
+        <div class="icon-container">
+          <img src="app-icon.png" alt="App Icon" />
+        </div>
+        <h3>App Development</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, dolorem!</p>
       </div>
     </div>
-  </div>
+    <div class="service-container">
+      <div class="service-box">
+        <div class="icon-container">
+          <img src="pixel.jpeg" alt="App Icon" />
+        </div>
+        <h3>App Development</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, dolorem!</p>
+      </div>
+      <div class="service-box">
+        <div class="icon-container">
+          <img src="pixel.jpeg" alt="App Icon" />
+        </div>
+        <h3>App Development</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, dolorem!</p>
+      </div>
+      <div class="service-box">
+        <div class="icon-container">
+          <img src="pixel.jpeg" alt="App Icon" />
+        </div>
+        <h3>App Development</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, dolorem!</p>
+      </div>
+    </div>
   <h1 class="underline-first custom-text">Jobs</h1>
     <div class="news-container">
       <div class="news-list">
@@ -38,3 +76,5 @@
       </div>
     </div>
 <app-contact></app-contact>
+</body>
+</html>

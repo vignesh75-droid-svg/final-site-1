@@ -32,3 +32,4 @@ export class NewsComponent {
     this.paper = newsItem;
   }
 }
+

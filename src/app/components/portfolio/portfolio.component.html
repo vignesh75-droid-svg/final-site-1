@@ -12,79 +12,142 @@
           <h1>Our Portfolio</h1>
           <p>From App to Web Development</p>
         </div>
-        <svg class="curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path fill="#ffffff" fill-opacity="1"
-            d="M0,288L48,272C96,256,192,224,288,186.7C384,149,480,107,576,106.7C672,107,768,149,864,170.7C960,192,1056,192,1152,197.3C1248,203,1344,213,1392,218.7L1440,224V320H0Z">
-          </path>
-        </svg>
+      <canvas #particleCanvas></canvas>
+
       </div>
-      <div class="container text-center my-5">
-        <div class="row">
-          <div class="col-md-4 col-6" *ngFor="let service of services">
-            <div class="card shadow p-4 mb-4 bg-white rounded">
-              <div class="icon mb-3">
-                <img [src]="service.icon" alt="Icon" width="90">
-              </div>
-              <h4 class="text-primary">{{ service.title }}</h4>
-              <p>{{ service.description }}</p>
-            </div>
+      <div class="ico"></div>
+      <div class="service-container">
+        <div class="service-box">
+          <div class="icon-container">
+            <img src="pixel.jpeg" alt="App Icon" />
           </div>
+          <h3>App Development</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, dolorem!</p>
+        </div>
+        <div class="service-box">
+          <div class="icon-container">
+            <img src="app-icon.png" alt="App Icon" />
+          </div>
+          <h3>App Development</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, dolorem!</p>
+        </div>
+        <div class="service-box">
+          <div class="icon-container">
+            <img src="app-icon.png" alt="App Icon" />
+          </div>
+          <h3>App Development</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, dolorem!</p>
+        </div>
+      </div>
+      <div class="service-container">
+        <div class="service-box">
+          <div class="icon-container">
+            <img src="pixel.jpeg" alt="App Icon" />
+          </div>
+          <h3>App Development</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, dolorem!</p>
+        </div>
+        <div class="service-box">
+          <div class="icon-container">
+            <img src="pixel.jpeg" alt="App Icon" />
+          </div>
+          <h3>App Development</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, dolorem!</p>
+        </div>
+        <div class="service-box">
+          <div class="icon-container">
+            <img src="pixel.jpeg" alt="App Icon" />
+          </div>
+          <h3>App Development</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, dolorem!</p>
         </div>
       </div>
         <h1 class="underline-first custom-text">Portfolio</h1>
-        <div class="hexa-led-container">
-            <div class="curvy-image">
-                <img src="pixel.jpeg" class="img-fluid" alt="Curvy Border">
-              </div>
-            <div class="text-container">
-              <h2>Hexa LED</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, eos, voluptatem, 
-                et sequi distinctio adipisci omnis in error quas fuga tempore fugit incidunt quos. 
-                Atque, debitis architecto ducimus eligendi dignissimos modi ut non officiis repudiandae maiores.
-              </p>
-            </div>
-          </div> 
-          <div class="hexa-led-container">
-          <div class="text-container">
-            <h2>Hexa LED</h2>
+        <div class="contain"></div>
+        <div class="container">
+          <div class="text-section">
+            <h1><span class="ekm">ekm</span><span class="soft">soft.in</span></h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, eos, voluptatem, 
-              et sequi distinctio adipisci omnis in error quas fuga tempore fugit incidunt quos. 
-              Atque, debitis architecto ducimus eligendi dignissimos modi ut non officiis repudiandae maiores.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Alias, repellat,
+              temporibus, consequatur, at ipsam sint iusto delectus laborum saepe sed error
+              aspernatur voluptatibus mollitia labore a? Nemo, reprehenderit, fugiat totam
+              atque voluptas quae ex blanditiis deleniti soluta repellat placeat tempora
+              fugit qui magnam distinctio doloremque nihil iste architecto expedita
+              voluptates! Est, illo, illum, ut asperiores obcaecati nihil quibusdam
+              voluptatum repellendus ullam error quo placeat doloremque cumque expedita
+              distinctio praesentium tempora ipsum quos quisquam mollitia accusamus iure
+              voluptas aut ratione officia quae id rerum? Deleniti, voluptatibus, impedit
+              fugit at dicta ea voluptas voluptatem laboriosam blanditiis distinctio quidem
+              dolorum assumenda maiores illo!
             </p>
           </div>
-            <div class="curvy-image">
-                <img src="pixel.jpeg" class="img-fluid" alt="Curvy Border">
-              </div>
+          <div class="image-section">
+            <svg viewBox="0 1 400 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <clipPath id="blobClip">
+                  <path fill="#000" d="M358.21,6.54c-55.37-35.43-401.89,92.35-353,193,17,35,138.91,101.73,216,95.93C313.21,288.54,433.21,54.54,358.21,6.54Z" />
+                </clipPath>
+              </defs>
+              <image href="pixel.jpeg" x="0" y="0" width="400" height="300" clip-path="url(#blobClip)" preserveAspectRatio="xMidYMid slice"/>
+            </svg>
           </div>
-        
-          <div class="hexa-led-container">
-            <div class="curvy-image">
-                <img src="pixel.jpeg" class="img-fluid" alt="Curvy Border">
-              </div>
-            <div class="text-container">
-              <h2>Hexa LED</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, eos, voluptatem, 
-                et sequi distinctio adipisci omnis in error quas fuga tempore fugit incidunt quos. 
-                Atque, debitis architecto ducimus eligendi dignissimos modi ut non officiis repudiandae maiores.
-              </p>
-            </div>
-          </div> 
-          <div class="hexa-led-container">
-            <div class="text-container">
-              <h2>Hexa LED</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, eos, voluptatem, 
-                et sequi distinctio adipisci omnis in error quas fuga tempore fugit incidunt quos. 
-                Atque, debitis architecto ducimus eligendi dignissimos modi ut non officiis repudiandae maiores.
-              </p>
-            </div>
-            <div class="curvy-image">
-                <img src="pixel.jpeg" class="img-fluid" alt="Curvy Border">
-              </div>
-          </div> 
+        </div>
+        <div class="container">
+          <div class="image-section">
+            <svg viewBox="0 1 400 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <clipPath id="blobClip">
+                  <path fill="#000" d="M358.21,6.54c-55.37-35.43-401.89,92.35-353,193,17,35,138.91,101.73,216,95.93C313.21,288.54,433.21,54.54,358.21,6.54Z" />
+                </clipPath>
+              </defs>
+              <image href="pixel.jpeg" x="0" y="0" width="400" height="300" clip-path="url(#blobClip)" preserveAspectRatio="xMidYMid slice"/>
+            </svg>
+          </div>
+          <div class="text-section">
+            <h1><span class="ekm">ekm</span><span class="soft">soft.in</span></h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Alias, repellat,
+              temporibus, consequatur, at ipsam sint iusto delectus laborum saepe sed error
+              aspernatur voluptatibus mollitia labore a? Nemo, reprehenderit, fugiat totam
+              atque voluptas quae ex blanditiis deleniti soluta repellat placeat tempora
+              fugit qui magnam distinctio doloremque nihil iste architecto expedita
+              voluptates! Est, illo, illum, ut asperiores obcaecati nihil quibusdam
+              voluptatum repellendus ullam error quo placeat doloremque cumque expedita
+              distinctio praesentium tempora ipsum quos quisquam mollitia accusamus iure
+              voluptas aut ratione officia quae id rerum? Deleniti, voluptatibus, impedit
+              fugit at dicta ea voluptas voluptatem laboriosam blanditiis distinctio quidem
+              dolorum assumenda maiores illo!
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="text-section">
+            <h1><span class="ekm">ekm</span><span class="soft">soft.in</span></h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Alias, repellat,
+              temporibus, consequatur, at ipsam sint iusto delectus laborum saepe sed error
+              aspernatur voluptatibus mollitia labore a? Nemo, reprehenderit, fugiat totam
+              atque voluptas quae ex blanditiis deleniti soluta repellat placeat tempora
+              fugit qui magnam distinctio doloremque nihil iste architecto expedita
+              voluptates! Est, illo, illum, ut asperiores obcaecati nihil quibusdam
+              voluptatum repellendus ullam error quo placeat doloremque cumque expedita
+              distinctio praesentium tempora ipsum quos quisquam mollitia accusamus iure
+              voluptas aut ratione officia quae id rerum? Deleniti, voluptatibus, impedit
+              fugit at dicta ea voluptas voluptatem laboriosam blanditiis distinctio quidem
+              dolorum assumenda maiores illo!
+            </p>
+          </div>
+          <div class="image-section">
+            <svg viewBox="0 1 400 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <clipPath id="blobClip">
+                  <path fill="#000" d="M358.21,6.54c-55.37-35.43-401.89,92.35-353,193,17,35,138.91,101.73,216,95.93C313.21,288.54,433.21,54.54,358.21,6.54Z" />
+                </clipPath>
+              </defs>
+              <image href="pixel.jpeg" x="0" y="0" width="400" height="300" clip-path="url(#blobClip)" preserveAspectRatio="xMidYMid slice"/>
+            </svg>
+          </div>
+        </div>
           <app-contact></app-contact>
         </div>
 </body>
