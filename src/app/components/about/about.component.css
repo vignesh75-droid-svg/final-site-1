@@ -1,11 +1,13 @@
 .container {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 2rem;
   font-family: Arial, sans-serif;
-}
+  gap:20px;
+  flex-direction: row;
+  display:flex;
 
+}
 .text-section {
   flex: 1;
   max-width: 50%;
@@ -22,6 +24,7 @@
 .image-section {
   flex: 1;
   max-width: 60%;
+  transform:rotate(8deg); 
 }
 
 svg {
@@ -30,5 +33,98 @@ svg {
 }
 .contain{
   border:1px solid white;
-  border-bottom-width: 63px;
+  border-width:30px;
+}
+p{
+   text-align: justify;
+}
+@media(max-width:768px){
+  .container{
+    flex-direction:column;
+    padding:0;
+  }
+  p{
+    text-align: justify;
+  }
+  .image-section{
+    order:-1;
+    max-width:100%;
+    transform: none;
+    display: flex;
+    justify-content: center;
+  }
+  .image-section,.text-section{
+    width:100%;
+    max-width: 100%;
+    padding:0 10px;
+  }
+}
+
+.svg-wave {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  width: 100%;
+}
+
+.svg-wave svg {
+  fill: #f6f7fd;
+  width: auto;
+  stroke: #f6f7fd;
+  stroke-width: 2;
+  right: 0;
+  position: absolute
+}
+
+.svg-wave.svg-wave-left {
+  right: auto;
+  left: -1px;
+  width: auto;
+}
+
+.svg-wave.svg-wave-left svg {
+  transform: scale(-1, 1);
+  fill: #fff;
+  stroke: #fff;
+  right: auto;
+  position: static
+}
+
+.svg-wave.svg-wave-right svg {
+  fill: #fff;
+  stroke: #fff
+}
+@media screen and (min-width: 48rem) {
+  .ed-element.preset-text-and-background-default>.inner>.ed-element {
+      flex-basis:50%
+  }
+}
+.ed-element.preset-text-and-background-default .text-and-background-background {
+  min-height: 300px;
+}
+.ed-collection-container,.ed-collection-item,.ed-container,.ed-reference-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.ed-collection-container>.inner,.ed-collection-item>.inner,.ed-container>.inner,.ed-reference-container>.inner {
+  align-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex: 1 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+}
+.ed-collection-container>.background,.ed-collection-container>.overlay,.ed-collection-item>.background,.ed-collection-item>.overlay,.ed-container>.background,.ed-container>.overlay,.ed-reference-container>.background,.ed-reference-container>.overlay {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
 }

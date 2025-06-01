@@ -1,3 +1,4 @@
+
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ContactComponent } from '../contact/contact.component';
@@ -10,6 +11,14 @@ import { AfterViewInit,ElementRef, ViewChild } from '@angular/core';
   styleUrl: './portfolio.component.css'
 })
 export class PortfolioComponent implements AfterViewInit {
+  services = [
+    { title: "App Development", description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.", icon: "image11.png" },
+    { title: "Cloud Development", description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.", icon: "images2.png" },
+    { title: "Database Engineering", description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.", icon: "images3.png" },
+    { title: "Devlopment Operation", description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.", icon: "images4.png" },
+    { title: "Software Development", description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.", icon: "image5.png" },
+    { title: "Web Development", description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.", icon: "images6.png" },
+  ];
   @ViewChild('particleCanvas') canvasRef!: ElementRef<HTMLCanvasElement>;
   private ctx!: CanvasRenderingContext2D;
   private particles: any[] = [];
@@ -21,7 +30,7 @@ export class PortfolioComponent implements AfterViewInit {
 
     window.addEventListener('resize', () => this.resizeCanvas());
 
-    this.initParticles(100);
+    this.initParticles(150);
     this.animate();
   }
 
@@ -51,6 +60,7 @@ export class PortfolioComponent implements AfterViewInit {
       p.x += p.speedX;
       p.y += p.speedY;
 
+      // Wrap around edges
       if (p.x < 0) p.x = canvas.width;
       if (p.x > canvas.width) p.x = 0;
       if (p.y < 0) p.y = canvas.height;
@@ -61,6 +71,7 @@ export class PortfolioComponent implements AfterViewInit {
       this.ctx.fillStyle ='white';
       this.ctx.fill();
     });
+     
   for (let i = 0; i < this.particles.length; i++) {
     for (let j = i + 1; j < this.particles.length; j++) {
       const p1 = this.particles[i];

@@ -4,11 +4,13 @@ import { ContactComponent } from '../contact/contact.component';
 import { AboutComponent } from '../about/about.component';
 import { NewsComponent } from '../news/news.component';
 import { AfterViewInit,ElementRef, ViewChild } from '@angular/core';
+import { ShowreelComponent } from '../showreel/showreel.component';
+import { reelComponent } from '../reel/reel.component';
 
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule,ContactComponent,AboutComponent,NewsComponent],
+  imports: [CommonModule,ContactComponent,AboutComponent,NewsComponent,ShowreelComponent,reelComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -33,7 +35,7 @@ export class HomeComponent implements AfterViewInit {
 
     window.addEventListener('resize', () => this.resizeCanvas());
 
-    this.initParticles(100);
+    this.initParticles(150);
     this.animate();
   }
 
@@ -74,7 +76,7 @@ export class HomeComponent implements AfterViewInit {
       this.ctx.fillStyle ='white';
       this.ctx.fill();
     });
-     // Draw lines between close particles
+     
   for (let i = 0; i < this.particles.length; i++) {
     for (let j = i + 1; j < this.particles.length; j++) {
       const p1 = this.particles[i];

@@ -1,79 +1,176 @@
 
-.hexa-led-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+
+
+
+
+.wv-bg.ed-image .background-image-holder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
-  .text-container {
-    flex: 1;
-    padding: 20px;
+
+
+.svg-wave {
+position: absolute;
+height: 100%;
+right: 0;
+width: 100%;
+}
+
+.svg-wave svg {
+fill: #f6f7fd;
+width: auto;
+stroke: #f6f7fd;
+stroke-width: 2;
+right: 0;
+position: absolute
+}
+
+.svg-wave.svg-wave-left {
+right: auto;
+left: -1px;
+width: auto;
+}
+
+.svg-wave.svg-wave-left svg {
+transform: scale(-1, 1);
+fill: #fff;
+stroke: #fff;
+right: auto;
+position: static
+}
+
+.svg-wave.svg-wave-right svg {
+fill: #fff;
+stroke: #fff
+}
+@media screen and (min-width: 48rem) {
+.ed-element.preset-text-and-background-default>.inner>.ed-element {
+    flex-basis:50%
+}
+}
+.ed-element.preset-text-and-background-default .text-and-background-background {
+min-height: 300px;
+}
+.ed-collection-container,.ed-collection-item,.ed-container,.ed-reference-container {
+display: flex;
+flex-direction: column;
+overflow: hidden;
+position: relative;
+width: 100%;
+}
+
+.ed-collection-container>.inner,.ed-collection-item>.inner,.ed-container>.inner,.ed-reference-container>.inner {
+align-content: flex-start;
+align-items: flex-start;
+display: flex;
+flex: 1 0 auto;
+flex-wrap: wrap;
+justify-content: flex-start;
+position: relative;
+width: 100%;
+}
+.ed-collection-container>.background,.ed-collection-container>.overlay,.ed-collection-item>.background,.ed-collection-item>.overlay,.ed-container>.background,.ed-container>.overlay,.ed-reference-container>.background,.ed-reference-container>.overlay {
+bottom: 0;
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+z-index: 0;
+}
+
+.gap{
+border: 1px solid white;
+border-width:50px;
+}
+
+
+
+
+
+
+html,body{
+  height:100%;
+  margin:0;
+  padding:0;
+}
+.home-container {
+   height:650px;
+   width:100%;
+   background:linear-gradient(to right,#412D90 40%,#102C92);
+   display:flex;
+   align-items:center;
+   justify-content: center;
+   color:white;
+   clip-path: ellipse(100% 100% at top);
   }
   
-  .text-container h2 {
-    color: #6A1B9A;
+  * {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
   }
-  
-  .text-container p {
-    font-size: 16px;
-    color: #555;
-  }
-  
-  .underline-first::first-letter{
-    text-decoration: underline;
-  }
-  .custom-text{
-    font-size:60px;
-    color: #3E43E9;
-    text-align: center;
-  }
-  .home-container {
-    height:650px;
-    width:100%;
-    background:linear-gradient(to right,#412D90 40%,#102C92);
-    display:flex;
-    align-items:center;
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
     justify-content: center;
-    color:white;
-    clip-path: ellipse(100% 100% at top);
+    align-items: center;
+    min-height: 100vh;
   }
 
   .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
-    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    padding: 20px;
+  }
+
+  .box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  .box:hover {
+    transform: scale(1.08);
+    z-index: 1;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .icon {
+    font-size: 40px;
+    color: #5c6bc0;
+    margin-bottom: 15px;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3f51b5;
+    margin-bottom: 10px;
+  }
+
+  .desc {
+    font-size: 14px;
+    color: #555;
   }
   
-  .text-section {
-    flex: 1;
-    max-width: 50%;
-  }
+
+
+ 
   
-  .ekm {
-    color: #000;
-  }
-  
-  .soft {
-    color: #3750f2;
-  }
-  
-  .image-section {
-    flex: 1;
-    max-width: 60%;
-  }
-  
-  svg {
-    width: 100%;
-    height: auto;
-  }
-  .contain{
-    border:1px solid white;
-    border-bottom-width: 63px;
-  }
-  
-  
+
   
   .service-container {
     display: flex;
@@ -116,10 +213,9 @@
     color:#4a4aff;
   }
 .ico{
-  border:1px solid white;
+  border:1px solid #F3F4F6;
   border-bottom-width: 63px;
 }
-
 canvas {
   position: absolute;
   top: 1;
@@ -129,3 +225,22 @@ canvas {
   display: block;
   z-index: -1;
 }
+h1{
+  font-weight: 600;
+  line-height: 1.5;
+  font-family: raleway;
+}
+
+
+
+  
+
+
+
+
+
+
+ 
+
+
+

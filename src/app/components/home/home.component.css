@@ -74,6 +74,8 @@ html,body{
 
  
   
+
+  
   .service-container {
     display: flex;
     flex-wrap: wrap;
@@ -127,7 +129,11 @@ canvas {
   display: block;
   z-index: -1;
 }
-
+h1{
+  font-weight: 600;
+  line-height: 1.5;
+  font-family: raleway;
+}
 
 
 
