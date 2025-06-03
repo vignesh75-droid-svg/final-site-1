@@ -6,7 +6,14 @@
   <h1>Showreel</h1>
   <div class="carousel-wrapper">
       <button class="arrow left" (click)="prev()">&#10094;</button>
-      <div class="carousel">
+      <div class="carousel"
+      (mousedown)="onDragStart($event)" 
+    (mousemove)="onDragMove($event)" 
+    (mouseup)="onDragEnd($event)" 
+    (mouseleave)="onDragEnd($event)"
+    (touchstart)="onDragStart($event)"
+    (touchmove)="onDragMove($event)"
+    (touchend)="onDragEnd($event)">>
         <div
           class="card"
           *ngFor="let card of visibleCards; let i = index"
@@ -28,7 +35,7 @@
         </svg>
           <h4>{{ card.title }}</h4>
           <p>{{ card.description }}</p>
-          <button>Find out more!</button>
+          <button class="click">Find out more!</button>
         </div>
       </div>
       <button class="arrow right" (click)="next()">&#10095;</button>

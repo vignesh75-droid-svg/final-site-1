@@ -30,13 +30,12 @@
 }
 
 .arrow {
-  background: #0047ab;
   color: white;
   border: none;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
+  font-size: 0rem;
   cursor: pointer;
   border-radius: 10px;
+  height:50px;
 }
 .arrow.left {
   margin-right: 10px;
@@ -82,30 +81,23 @@ h1{
   background-repeat: no-repeat;
   backdrop-filter: blur(0px);
 }
-@media screen and (max-width: 35.9375rem) {
-  .curved-seperator {
-      height: 100px;
+
+@media screen and (max-width: 767px) {
+  .curved-seperator svg {
+      height: 75px;
   }
   .image{
-    height:930px;
+    height:970px;
   }
-  .svg{
-    height:50px;
+  .curved-seperator{
+    height:55px;
   }
-  h1{
-    font-size:73px;
+  .arrow.right{
+    display:none;
   }
-}
-@media only screen and (max-width: 1024px) {
-  .curved-seperator {
-    height: 75px;
-}
-.image{
-  height:950px;
-}
-.svg{
-  height:100px;
-}
+  .arrow.left{
+    display: none;
+  }
 }
 h4{
   color:blue;
@@ -116,9 +108,29 @@ p{
   padding:0px 10px 10px 10px;
 }
 button{
-  background-color: blue;
   color:white;
   border-radius: 50px;
   height:100px;
   margin:0px 0px 10px 0px;
+}
+.click{
+  background-color: blue;
+
+}
+
+ h1 {
+  color: #fff;
+}
+.center {
+  text-align: center;
+}
+@media screen and (max-width: 35.9375rem) {
+  h1 {
+      font-size: 2rem;
+  }
+}
+@media screen and (max-width: 60.9375rem) {
+  h1 {
+      font-size: 3.5rem;
+  }
 }

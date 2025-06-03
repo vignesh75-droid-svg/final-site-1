@@ -4,13 +4,12 @@ import { ContactComponent } from '../contact/contact.component';
 import { AboutComponent } from '../about/about.component';
 import { NewsComponent } from '../news/news.component';
 import { AfterViewInit,ElementRef, ViewChild } from '@angular/core';
-import { ShowreelComponent } from '../showreel/showreel.component';
 import { reelComponent } from '../reel/reel.component';
 
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule,ContactComponent,AboutComponent,NewsComponent,ShowreelComponent,reelComponent],
+  imports: [CommonModule,ContactComponent,AboutComponent,NewsComponent,reelComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

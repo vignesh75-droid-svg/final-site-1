@@ -55,4 +55,39 @@ export class reelComponent {
         transition: 'transform 0.5s ease, opacity 0.5s ease'
       };
     }
+    private isDragging = false;
+private startX = 0;
+private currentX = 0;
+
+onDragStart(event: MouseEvent | TouchEvent) {
+  this.isDragging = true;
+  this.startX = this.getX(event);
+}
+
+onDragMove(event: MouseEvent | TouchEvent) {
+  if (!this.isDragging) return;
+  this.currentX = this.getX(event);
+}
+
+onDragEnd(event: MouseEvent | TouchEvent) {
+  if (!this.isDragging) return;
+  this.isDragging = false;
+
+  const diffX = this.currentX - this.startX;
+  const threshold = 50; // Adjust sensitivity
+
+  if (diffX > threshold) {
+    this.prev(); // Swipe Right → Show previous card
+  } else if (diffX < -threshold) {
+    this.next(); // Swipe Left → Show next card
+  }
+}
+
+private getX(event: MouseEvent | TouchEvent): number {
+  if (event instanceof MouseEvent) {
+    return event.clientX;
+  } else {
+    return event.touches[0].clientX;
+  }
+}
   }

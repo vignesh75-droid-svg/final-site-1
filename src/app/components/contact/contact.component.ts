@@ -10,52 +10,25 @@ import { FormBuilder,Validators,FormGroup } from '@angular/forms';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
-  input:any= FormGroup;
+  contactForm: FormGroup;
+  captchaCode: string = '26X4PD';
 
-  constructor (private fill:FormBuilder) {}
-
-  ngOnInit(): void {
-    this.input=this.fill.group({
-      FullName: ['',[Validators.required, Validators.minLength(4), Validators.pattern('^[a-zA-Z]*$')]],
-      phoneNumber: ['',
-        [Validators.required, Validators.pattern('^[6-9]{1}[0-9]{9}$')]
-      ],
-      email: ['',
-        [Validators.required, Validators.email]
-      ],
-      message: ['',
-        [Validators.required, Validators.minLength(5)]
-      ],
+  constructor(private fb: FormBuilder) {
+    this.contactForm = this.fb.group({
+      name: ['', Validators.required],
+      phone: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required],
+      captcha: ['', Validators.required],
+      policy: [false, Validators.requiredTrue]
     });
   }
 
-  button() {
-    if (this.input.valid) {
-      console.log('Form Submitted', this.input.value);
+  onSubmit(): void {
+    if (this.contactForm.valid) {
+      console.log('Form Submitted', this.contactForm.value);
     } else {
-      console.log('Form is invalid');
+      console.log('Form Invalid');
     }
   }
-
-  get FullName() {
-    return this.input.get('FullName');
-  }
-
-  get phoneNumber() {
-    return this.input.get('phoneNumber');
-  }
-
-  get email() {
-    return this.input.get('email');
-  }
-  get message() {
-    return this.input.get('message');
-  }
-  delete(){
-    this.input.reset();
-  }
-
-generateCaptcha() {
-  alert("New Captcha Generated! (Simulated)");
-}
 }
