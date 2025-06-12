@@ -6,21 +6,37 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
-  </div>
+  
 <h1 class="underline-first custom-text">News</h1>
-  <div class="news-container">
-    <div class="news-list">
-      <ul>
-        <li *ngFor="let news of newsList" (click)="updateNews(news)">
-          {{ news.title }}
-        </li>
-      </ul>
+<div class="news-container">
+  <div class="news-list">
+    <ul>
+      <li *ngFor="let news of newsList" (click)="updateNews(news)">
+        {{ news.title }}
+      </li>
+    </ul>
+  </div>
+
+  <div [@shutter]="isOpen ? 'open' : 'closed'" class="news-content-wrapper">
+    <div class="paper-wrapper">
+  <svg fill="white" viewBox=" 0 0 300 500"  preserveAspectRatio="xMaxYMax meet" >
+    <image [attr.href]="paper.image" alt="Image" x="-350" y="0" height="100%" width="100%"  preserveAspectRatio="xMaxYMax slice"/>
+    <path  d="M 280,0 L 300,0 L 300,500 L 110,500 C 130 400, 160 395, 197 355 C 200 350, 340 230, 280 0 Z "></path>
+  </svg>   
+      <div class="text-block">
+        <h2>{{ paper.title }}</h2>
+      <p>{{ paper.content }}
+      </p>
+      <p class="boder"></p>
+      <p>Read more at:</p>
+      <a href="https://medium.com/" target="_blank"><svg class="blog" id="gap1" xmlns="http://www.w3.org/2000/svg" viewBox="0 -416 448 448" data-icon="fa-brands-medium" preserveAspectRatio="xMidYMid"><path d="M0 -416V32H448V-416H0zM372.2 -309.9L348.2 -286.9C346.1 -285.3 345.1 -282.7 345.5 -280.2V-110.9C345.1 -108.3 346.1 -105.7 348.2 -104.2L371.7 -81.2V-76.1H253.7V-81L278 -104.6C280.4 -107 280.4 -107.7 280.4 -111.3V-248.2L212.8 -76.6H203.7L125 -248.2V-133.2C124.3 -128.4 126 -123.5 129.4 -120L161 -81.7V-76.6H71.2V-81.7L102.8 -120C106.2 -123.5 107.7 -128.4 106.9 -133.2V-266.2C107.3 -269.9 105.9 -273.5 103.1 -276L75 -309.9V-315H162.3L229.7 -167L289 -314.9H372.2V-309.9z"></path></svg></a>
+      <a href="https://www.blogger.com/about/?hl=en" target="_blank"><svg class="blog" id="gap2" xmlns="http://www.w3.org/2000/svg" viewBox="0 -415 447 447" data-icon="fa-brands-blogger" preserveAspectRatio="xMidYMid"><path d="M162.4 -252C167.2 -256.9 168.6 -257.1 198.8 -257.1C226 -257.1 226.9 -257 230.9 -255C236.7 -252.1 239.2 -248 239.2 -241.4C239.2 -235.5 236.8 -231.4 231.6 -228C228.8 -226.2 227.1 -226.1 200.5 -225.9C184.1 -225.8 171 -226.1 169 -226.7C158.7 -229.6 154.9 -244.4 162.4 -252zM223.8 -157.5C169.9 -157.5 168 -157.3 163.6 -153.4C160.1 -150.3 157.9 -144 158.5 -139.5C159.2 -134.8 163.3 -129.4 167.7 -127.5C169.9 -126.5 181.8 -125.8 224 -126.3L271.9 -126.9L281.1 -128.4C290.1 -133.5 291.6 -145.8 284.2 -152.8C278.9 -157.5 279.2 -157.5 223.8 -157.5zM447.2 -27.4C443.7 1 424.2 23 396.1 30.1C388.9 31.9 386.4 32 223.2 31.9C65.4 31.9 57.3 31.8 51.2 30.1C42.8 27.9 35.6 24.6 28.9 20.1C23.3 16.3 15 8.3 11.9 3.7C8.1 -1.9 3.7 -11.6 1.9 -18.3C0.1 -25 0 -27.7 0 -191.7C0 -354.8 0 -358.3 1.8 -365.4C8.1 -390.1 27.7 -409 53 -414.6C60.3 -416.2 385.1 -416.5 393 -414.9C414.2 -410.6 430.9 -397.8 440.6 -378.5C448.3 -363.2 447.6 -380 447.9 -197.9C448.1 -82.1 447.9 -33.4 447.2 -27.4zM361.8 -212.6C360.7 -217.6 357.6 -222.2 354.1 -224.1C353 -224.7 346.1 -225.4 338.6 -225.8C326.2 -226.4 324.8 -226.6 320.8 -228.9C314.6 -232.5 312.9 -236.5 312.8 -247.2C312.8 -267.6 304.3 -286.6 287.5 -303.7C275.5 -315.9 262.2 -324.2 246.9 -328.8C243.3 -329.9 235.1 -330.3 207.7 -330.6C164.8 -331.1 155.2 -330.2 140.6 -324.4C113.6 -313.7 94.3 -291 87.2 -262C85.9 -256.6 85.6 -247.8 85.3 -197.7C84.9 -134.9 85.3 -125.6 89.3 -113.2C99 -82.5 126.4 -59.8 153.9 -54.8C163.1 -53.1 276.1 -52.7 287.6 -54.3C307.7 -57 323.5 -65.1 338.3 -80.2C349 -91.1 355.7 -103 360.1 -118.7C363.3 -129.6 363 -207.1 361.8 -212.6z"></path></svg></a>
+      <a href="https://www.facebook.com/" target="_blank"><svg class="blog" id="gap3" xmlns="http://www.w3.org/2000/svg" viewBox="0 -416 448 448" data-icon="fa-brands-facebook" preserveAspectRatio="xMidYMid"><path d="M448 -391.3V7.2C448 20.9 436.9 31.9 423.3 31.9H309.1V-141.5H367.3L376 -209.1H309V-252.3C309 -271.9 314.4 -285.2 342.5 -285.2H378.3V-345.7C372.1 -346.5 350.9 -348.4 326.1 -348.4C274.5 -348.4 239.1 -316.9 239.1 -259V-209.1H180.7V-141.5H239.1V32H24.7C11.1 32 0 20.9 0 7.3V-391.3C0 -404.9 11.1 -416 24.7 -416H423.2C436.9 -416 448 -404.9 448 -391.3z"></path></svg></a>
+      <a href="https://ghost.org/" target="_blank"><svg class="blog" id="gap4" xmlns="http://www.w3.org/2000/svg"  viewBox="62 -787 875 875" data-icon="ico-social-ghost" preserveAspectRatio="xMidYMid"><path d="M62.5 -461.1h875V-239h-875v-222.1zm0 -326.4h537.8V-600.6H62.5v-186.9zm688.2 -0h186.8V-602.9H750.7v-184.6zM62.5 -113h364.6V87.5H62.5V-113zm515 -0h360V87.5h-360V-113z"></path></svg></a>
+      </div>
     </div>
-    <div class="news-content">
-      <h2>{{ paper.title }}</h2>
-      <img [src]="paper.image" alt="{{ paper.title }}">
-      <p>{{ paper.content }}</p>
-    </div></div>
-  </body>
+  </div>
+</div>
+
+</body>
 </html>

@@ -21,7 +21,7 @@ export const routes: Routes = [
     component:AboutComponent
   },
   {
-    path:'showreel',
+    path:'reel',
     component:reelComponent
   },
  { 

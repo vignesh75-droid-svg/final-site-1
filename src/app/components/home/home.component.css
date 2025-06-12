@@ -122,10 +122,11 @@ canvas {
   display: block;
   z-index: -1;
 }
-h1{
-  font-weight: 600;
-  line-height: 1.5;
-  font-family: raleway;
+.h1{
+  font-size:3.9rem;
+}
+.p{
+  text-align: center;
 }
 
 

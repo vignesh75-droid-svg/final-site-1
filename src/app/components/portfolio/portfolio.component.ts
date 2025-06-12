@@ -15,10 +15,11 @@ export class PortfolioComponent implements AfterViewInit {
     { title: "App Development", description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.", icon: "image11.png" },
     { title: "Cloud Development", description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.", icon: "images2.png" },
     { title: "Database Engineering", description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.", icon: "images3.png" },
-    { title: "Devlopment Operation", description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.", icon: "images4.png" },
+    { title: "Devlopment Operations", description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.", icon: "images4.png" },
     { title: "Software Development", description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.", icon: "image5.png" },
     { title: "Web Development", description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.", icon: "images6.png" },
   ];
+
   @ViewChild('particleCanvas') canvasRef!: ElementRef<HTMLCanvasElement>;
   private ctx!: CanvasRenderingContext2D;
   private particles: any[] = [];

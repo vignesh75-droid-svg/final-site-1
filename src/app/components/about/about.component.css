@@ -4,9 +4,8 @@
   padding: 2rem;
   font-family: Arial, sans-serif;
   gap:20px;
-  flex-direction: row;
   display:flex;
-
+  flex-direction: row;
 }
 .text-section {
   flex: 1;
@@ -78,8 +77,8 @@ p{
 
 .svg-wave.svg-wave-left {
   right: auto;
-  left: -1px;
   width: auto;
+  left: -1px;
 }
 
 .svg-wave.svg-wave-left svg {
