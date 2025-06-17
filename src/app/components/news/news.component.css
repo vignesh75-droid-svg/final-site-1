@@ -177,6 +177,7 @@
     font-size:60px;
     color: #3E43E9;
     text-align: center;
+    padding-top:19px;
   }
   h2{
     color:#3E43E9;
@@ -210,6 +211,6 @@ p{
 @media (min-width:1500px){
   .boder{
     border:1px solid blue;
-    width:150px;
+    width:500px;
   }
 }

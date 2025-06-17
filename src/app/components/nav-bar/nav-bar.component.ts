@@ -17,12 +17,11 @@ export class NavBarComponent implements AfterViewInit{
       this.navbar.style.transition = 'background-color 0.4s ease';
     }
   }
-
   @HostListener('window:scroll', [])
   onWindowScroll() {
     if (!this.navbar) return;
 
-    if (window.scrollY > 650) {
+    if (window.scrollY > 700) {
       this.navbar.style.backgroundColor = 'blue';
     } else {
       this.navbar.style.backgroundColor = 'transparent';

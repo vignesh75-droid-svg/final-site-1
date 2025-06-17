@@ -13,16 +13,14 @@ html,body{
    color:white;
    clip-path: ellipse(100% 100% at top);
   }
-  
   * {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
   }
-
   body {
     margin: 0;
     padding: 0;
-    background-color: #f3f4f6;
+    background-color: #F6F7FD;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -74,6 +72,7 @@ html,body{
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    background-color: #F6F7FD;
   }
   
   .service-box{
@@ -110,8 +109,10 @@ html,body{
     color:#4a4aff;
   }
 .ico{
-  border:1px solid #F3F4F6;
+  
+  border:1px solid #F6F7FD;
   border-bottom-width: 63px;
+
 }
 canvas {
   position: absolute;
@@ -128,13 +129,14 @@ canvas {
 .p{
   text-align: center;
 }
+h1{
+  font-size:5.8rem;
+}
+.text{
+  text-align:center;
+  font-size:1.6rem;
+}
 
-
-
-
-
-
- 
 
 
 

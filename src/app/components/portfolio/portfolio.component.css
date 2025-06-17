@@ -22,7 +22,7 @@ html,body{
   body {
     margin: 0;
     padding: 0;
-    background-color: #f3f4f6;
+    background-color: #F6F7FD;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -74,6 +74,7 @@ html,body{
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    background-color: #F6F7FD;
   }
   
   .service-box{
@@ -110,7 +111,7 @@ html,body{
     color:#4a4aff;
   }
 .ico{
-  border:1px solid #F3F4F6;
+  border:1px solid #F6F7FD;
   border-bottom-width: 63px;
 }
 canvas {
@@ -128,24 +129,11 @@ canvas {
 .p{
   text-align: center;
 }
-
-
-
-
-
-
- 
-
-
-
-
-
 @media screen and (max-width: 975px) {
   #ed-603026589 > .inner {
       justify-content: flex-end;
   }
 }
-
 #ed-603026835 {
   border-width: 0px 0px 1px;
   border-style: solid;
@@ -337,7 +325,8 @@ h3,.h3 {
 }
 @media screen and (min-width: 48rem) {
   .ed-element.preset-text-and-background-default>.inner>.ed-element {
-      flex-basis:50%
+  background: #fff;
+    flex-basis:50%;
   }
 }
 .ed-element.preset-text-and-background-default .text-and-background-content {
@@ -403,5 +392,17 @@ h3,.h3 {
 .flex-align-items-stretch>.inner {
   align-items: stretch
 }
+h1{
+  font-size:5.8rem;
+}
+.text{
+  text-align:center;
+  font-size:1.6rem;
+}
+.borde{
+  background-color: white;
+}
 
-
+.underline-first::first-letter{
+  text-decoration: underline;
+}

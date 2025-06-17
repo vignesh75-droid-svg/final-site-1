@@ -1,15 +1,38 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ContactComponent } from '../contact/contact.component';
 import { AfterViewInit,ElementRef, ViewChild } from '@angular/core';
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate
+} from '@angular/animations';
 
 @Component({
   selector: 'app-jobs',
   imports: [CommonModule,ContactComponent],
   templateUrl: './jobs.component.html',
-  styleUrl: './jobs.component.css'
+  styleUrl: './jobs.component.css',
+  animations: [
+    trigger('shutter', [
+      state('closed', style({
+        height: '0',
+        opacity: 0,
+        overflow: 'hidden'
+      })),
+      state('open', style({
+        height: '*',
+        opacity: 1
+      })),
+      transition('closed <=> open', [
+        animate('350ms ease-in-out')
+      ])
+    ])
+  ]
 })
-export class JobsComponent implements AfterViewInit{
+export class JobsComponent implements AfterViewInit,OnInit{
   services = [
     { title: "Competitive Wage", description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.", icon: "job1.png" },
     { title: "Pet Friendly", description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.", icon: "job2.png" },
@@ -18,28 +41,39 @@ export class JobsComponent implements AfterViewInit{
     { title: "Flexible Hours", description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.", icon: "job5.png" },
     { title: "401k/Retirement", description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.", icon: "job6.png" },
   ];
+  
   newsList = [
     { 
-      title: 'Senior DevOps Engineer', 
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
+      title: 'Product Launch Q1 2019', 
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit. Alias, repellat,temporibusLorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       image: 'pixel.jpeg' 
     },
     { 
-      title: 'Junior Web Developer', 
-      content: 'New investment received from global tech firms...',
+      title: 'New Investor', 
+      content: 'New investment received from global tech firms...consectetur adipiscing elit Loremconsectetur adipiscing elit Loremconsectetur adipiscing el',
       image: 'pixel.jpeg' 
     },
     { 
-      title: 'Intern', 
-      content: 'We are honored to receive the Apple Design Award...',
+      title: 'Apple Design Awards', 
+      content: 'We are honored to receive the Apple Design Award...consectetur adipiscing elit Loremconsectetur adipiscing elit Loremconsectetur adipiscing ',
       image: 'pixel.jpeg' 
     }
   ];
 
-  paper = this.newsList[0];
+  paper = { title: '', content: '',image:''};
+  isOpen = false;
 
+  ngOnInit(): void {
+    this.paper=this.newsList[0];
+    this.isOpen=true;
+  }
   updateNews(newsItem: any) {
     this.paper = newsItem;
+    this.isOpen = false;
+  
+    setTimeout(() => {
+      this.isOpen = true;
+    }, 300);
   }
   @ViewChild('particleCanvas') canvasRef!: ElementRef<HTMLCanvasElement>;
   private ctx!: CanvasRenderingContext2D;

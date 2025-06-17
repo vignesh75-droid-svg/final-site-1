@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-reel',
-  imports: [CommonModule,],
+  imports: [CommonModule,RouterLink,RouterOutlet],
   templateUrl: './reel.component.html',
   styleUrl: './reel.component.css'
 })
@@ -74,12 +75,12 @@ onDragEnd(event: MouseEvent | TouchEvent) {
   this.isDragging = false;
 
   const diffX = this.currentX - this.startX;
-  const threshold = 50; // Adjust sensitivity
+  const threshold = 50;
 
   if (diffX > threshold) {
-    this.prev(); // Swipe Right → Show previous card
+    this.prev(); 
   } else if (diffX < -threshold) {
-    this.next(); // Swipe Left → Show next card
+    this.next(); 
   }
 }
 

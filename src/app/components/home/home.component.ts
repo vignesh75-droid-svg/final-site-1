@@ -63,8 +63,6 @@ export class HomeComponent implements AfterViewInit {
     this.particles.forEach(p => {
       p.x += p.speedX;
       p.y += p.speedY;
-
-      // Wrap around edges
       if (p.x < 0) p.x = canvas.width;
       if (p.x > canvas.width) p.x = 0;
       if (p.y < 0) p.y = canvas.height;
